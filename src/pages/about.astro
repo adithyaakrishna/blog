@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-
 import PageLayout from "@/layouts/Base";
 import aboutImg from "@/assets/Adi.jpeg";
 
@@ -13,36 +12,66 @@ const meta = {
 <PageLayout meta={meta}>
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
-		<p>
-			I'm a design engineer (or a full-stck developer? still confused)
-  
-			I used to work as a SWE-II at [Documenso](https://documenso.com) for ~7 months. Before that, I started my career working at [Red Hat](https://redhat.com) for ~2.5 years, where I worked with the Customer Portal team [https://access.redhat.com](https://access.redhat.com)
-			<br />
-			<br />
-			I was also a [Google Season of Docs - GSoD '23](https://developers.google.com/season-of-docs) Technical Writer at [WasmEdge](https://github.com/WasmEdge) where I worked towards improving the documentation of the project and onboarding contributors. I was also a [Google Summer of Code - GSoC '23](https://summerofcode.withgoogle.com/) Developer at [OpenChemistry](https://openchemistry.org), where I worked on improving the [3DMol.js](https://github.com/3dmol/3Dmol.js) library.
-			<br />
-			<br />
-			I'm a maintainer of [Meshery](https://github.com/meshery) (a CNCF Sandbox Project), where I used to contribute in areas of UI, GitHub Actions, docs, reviewing PRs, and suggesting improvements.
+		<p class="mb-2 mt-6 text-white">
+			I'm a design engineer (or a full-stack developer? still confused)
 		</p>
-		 
-		<!-- <p>Here are my some of my awesome built in features:</p>
-		<ul class="list-inside list-disc">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
-		</ul> -->
-		<p>
-			Clone or fork my <a
-				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
+		
+		<p class="mb-2 mt-6 text-white">
+			I used to work as a SWE-II at <a 
+				href="https://documenso.com" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">Documenso</a> for ~7 months. Before that, I started my career working at <a 
+				href="https://redhat.com" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">Red Hat</a> for ~2.5 years, where I worked with the Customer Portal team <a 
+				href="https://access.redhat.com" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">https://access.redhat.com</a>
+		</p>
+		
+		<p class="mb-2 mt-6 text-white">
+			I was also a <a 
+				href="https://developers.google.com/season-of-docs" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">Google Season of Docs - GSoD '23</a> Technical Writer at <a 
+				href="https://github.com/WasmEdge" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">WasmEdge</a> where I worked towards improving the documentation of the project and onboarding contributors. I was also a <a 
+				href="https://summerofcode.withgoogle.com/" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">Google Summer of Code - GSoC '23</a> Developer at <a 
+				href="https://openchemistry.org" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">OpenChemistry</a>, where I worked on improving the <a 
+				href="https://github.com/3dmol/3Dmol.js" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">3DMol.js</a> library.
+		</p>
+		
+		<p class="mb-2 mt-6 text-white">
+			I'm a maintainer of <a 
+				href="https://github.com/meshery" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-[#29bc89]">Meshery</a> (a CNCF Sandbox Project), where I used to contribute in areas of UI, GitHub Actions, docs, reviewing PRs, and suggesting improvements.
+		</p>
+
+		<p class="mb-2 mt-6">
+			<i>Clone or fork my <a
+				class="text-[#29bc89]"
+				href="https://github.com/adithyaakrishna/blog"
 				target="_blank"
 				rel="noopener noreferrer"
-				aria-label="github repository">repo</a
-			> if you like me!
+				aria-label="github repository">repo</a>
+			if you like me!</i>
 		</p>
 	</div>
 </PageLayout>
