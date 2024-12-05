@@ -6,7 +6,6 @@ updatedDate: "25 September 2024"
 coverImage:
   src: "./fomo.gif"
   alt: "Fear of missing out"
-  caption: "random gif picked from google"
 tags: ["life", "thoughts", "joy"]
 published: true
 ---

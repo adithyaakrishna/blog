@@ -25,7 +25,6 @@ const post = defineCollection({
 				.object({
 					src: image(),
 					alt: z.string(),
-					caption: z.string(),
 				})
 				.optional(),
 			draft: z.boolean().default(false),
