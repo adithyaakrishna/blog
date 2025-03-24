@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import PageLayout from "@/layouts/Base";
-import aboutImg from "@/assets/Adi.jpeg";
+import aboutImg from "@/assets/cycle.JPG";
+import monkeyImg from "@/assets/monkey.jpeg";
+import museumImg from "@/assets/museum.jpeg";
 
 const meta = {
 	title: "About",
@@ -12,66 +14,57 @@ const meta = {
 <PageLayout meta={meta}>
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
-		<p class="mb-2 mt-6 text-white">
-			I'm a design engineer (or a full-stack developer? still confused)
+		<p class="mb-2 mt-6">
+			Thank you for taking the time to internet stalk me! If you are here, you are probably 2-3 clicks deep and since you've gone through all this trouble (and possibly neglected other important <strike>jiras</strike> tasks), I suppose I owe you a tiny <strike>sales</strike> pitch
 		</p>
 		
-		<p class="mb-2 mt-6 text-white">
-			I used to work as a SWE-II at <a 
-				href="https://documenso.com" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">Documenso</a> for ~7 months. Before that, I started my career working at <a 
-				href="https://redhat.com" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">Red Hat</a> for ~2.5 years, where I worked with the Customer Portal team <a 
-				href="https://access.redhat.com" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">https://access.redhat.com</a>
-		</p>
+		<p class="mb-2 mt-6">
+		I'm a native Bangalorean, India. I like to do what excites me along with doing the most <strike>spontaneous</strike> random things and ofc having a nice cup of <span class="text-accent">filter coffee</span>. I grew up cycling around Blr and tinkering with computers during my summers. And during these holidays, my mom inculcated reading books as a habit in me and the first collection I read was <span class="text-accent">The Famous Five </span> by Enid Blyton followed by <span class="text-accent">The Faraway Tree</span>, and then <span class="text-accent">Chetan Bhagat</span> and a few more. But this habit got lost after my bachelor's studies and I'm slowly getting back to it. 
 		
-		<p class="mb-2 mt-6 text-white">
-			I was also a <a 
-				href="https://developers.google.com/season-of-docs" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">Google Season of Docs - GSoD '23</a> Technical Writer at <a 
-				href="https://github.com/WasmEdge" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">WasmEdge</a> where I worked towards improving the documentation of the project and onboarding contributors. I was also a <a 
-				href="https://summerofcode.withgoogle.com/" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">Google Summer of Code - GSoC '23</a> Developer at <a 
-				href="https://openchemistry.org" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">OpenChemistry</a>, where I worked on improving the <a 
-				href="https://github.com/3dmol/3Dmol.js" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">3DMol.js</a> library.
-		</p>
-		
-		<p class="mb-2 mt-6 text-white">
-			I'm a maintainer of <a 
-				href="https://github.com/meshery" 
-				target="_blank" 
-				rel="noopener noreferrer" 
-				class="text-[#29bc89]">Meshery</a> (a CNCF Sandbox Project), where I used to contribute in areas of UI, GitHub Actions, docs, reviewing PRs, and suggesting improvements.
 		</p>
 
 		<p class="mb-2 mt-6">
-			<i>Clone or fork my <a
-				class="text-[#29bc89]"
-				href="https://github.com/adithyaakrishna/blog"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="github repository">repo</a>
-			if you like me!</i>
+		I've always been fascinated with computers ever since I was a kid but used to hate math (a crime in a Indian family). And this fascination of mine (along with a touch of fomo) has pushed me to do a lot of stuff. Be it hackathons or building stupid sites to ask a girl out on a date (one was for a concert, but blr had other plans)
+
 		</p>
+
+		<p class="mb-2 mt-6">
+		Now I code and develop things I'm deeply passionate about. Currently I work with <a 
+				href="https://www.tensorlake.ai" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-accent">Tensorlake</a> (thanks to  <a 
+				href="https://x.com/nonvonmon" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-accent">@nonvonmon</a> for referring me) where I build UI stuff like Our Website, Cloud Platform and <i>psst!</i> a soon to be launched product(s)
+		</p>
+
+
+		<h2 class="font-bold ">Few pictures of me</h2>
+
+		<div class="my-4 flex justify-start gap-2">
+			<Image
+				src={aboutImg}
+				alt="Adithya Krishna"
+				width={280}
+				height={280}
+				class="rounded-lg shadow-md grayscale"
+			/>
+			<Image
+				src={museumImg}
+				alt="Adithya Krishna"
+				width={200}
+				height={200}
+				class="h-100 rounded-lg shadow-md grayscale"
+			/>
+			<Image
+				src={monkeyImg}
+				alt="Adithya Krishna"
+				width={200}
+				height={200}
+				class="h-100 rounded-lg shadow-md grayscale"
+			/>
+		</div>
 	</div>
 </PageLayout>

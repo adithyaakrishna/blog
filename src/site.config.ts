@@ -28,11 +28,11 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/blog/",
 	},
 	{
-		title: "about",
-		path: "/blog/about/",
+		title: "posts",
+		path: "/blog/posts/",
 	},
 	{
-		title: "blog",
-		path: "/blog/posts/",
+		title: "about",
+		path: "/blog/about/",
 	},
 ];

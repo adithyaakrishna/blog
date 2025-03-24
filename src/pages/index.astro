@@ -13,25 +13,28 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 <PageLayout meta={{ title: "Home" }}>
 	<section>
 		<h1 class="title">hey!</h1>
-		<span>ಕನ್ನಡ: ನಮಸ್ಕಾರ</span>
-		<p class="mb-2 mt-6 text-white">
-			My friends call me <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">Adi</span> and I'm based out of <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">Bengaluru</span> (yes, I love masale dose and filter coffee). I used to be a frontend engineer and now im more of a generalist (or maybe a design engineer?). 
-		</p>
-
-		<p class="mb-2 mt-6 text-white">
-			Currently working at <strong><i>stark enterprises</i></strong> where I'm building real time serving engine. along with that, im a <strike>emergency</strike> dev according to <a class="text-[#29bc89]" href="https://x.com/_adi18_" target="_blank">@_adi18_</a> for his legalai company <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">nyayanidhi</span>
+		<span>ನಮಸ್ಕಾರ</span>
+		<p class="mb-2 mt-6">
+			My friends call me <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">Adi</span> and I'm based out of <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">Bengaluru</span> (yes, I love masale dose and filter coffee). I used to be a frontend engineer and now im more of a full-stack engineer?
 		</p>
 
 		<p class="mb-2 mt-6">
-			<i>I love meeting new people and going for breakfast walks. If you have any cafe suggestions or like to work from a cafe, im always down for it. Feel free to hmu on twitter/x</i>
+			Currently working at <strong><a 
+				href="https://www.tensorlake.ai" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="text-accent">Tensorlake</a></strong> where I'm building the UI stuff. along with that, im a <strike>emergency</strike> dev according to <a class="text-[#29bc89]" href="https://x.com/_adi18_" target="_blank">@_adi18_</a> for his legalai company <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">nyayanidhi</span>
+		</p>
+
+		<p class="mb-2 mt-6">
+			<i>I love connecting with new people over morning walks and breakfast. Always on the lookout for great cafés to work from or explore - if you have recommendations or want to join, reach out to me on Twitter/X</i>
 		</p>
 		<SocialList />
 	</section>
 	
 
 	<section aria-label="Blog post list" class="mt-10">
-		<h2 class="title text-xl">memoirs</h2>
-		<span>ಕನ್ನಡ: ಆತ್ಮಚರಿತ್ರೆಗಳು</span>
+		<h2 class="title">thoughts dump</h2>
 		<ul class="space-y-4 sm:space-y- mt-4">
 			{
 				allPostsByDate.map((p) => (
