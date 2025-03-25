@@ -2,12 +2,15 @@
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
-import { getAllPosts, sortMDByDate } from "@/utils";
+import { getAllPosts, sortMDByDate, getUniqueTags } from "@/utils";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+const uniqueTags = getUniqueTags(allPosts);
 
+const techPosts = allPostsByDate.filter(post => post.data.tags?.includes("tech"));
+const otherPosts = allPostsByDate.filter(post => !post.data.tags?.includes("tech"));
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -15,7 +18,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<h1 class="title">hey!</h1>
 		<span>ನಮಸ್ಕಾರ</span>
 		<p class="mb-2 mt-6">
-			My friends call me <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">Adi</span> and I'm based out of <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">Bengaluru</span> (yes, I love masale dose and filter coffee). I used to be a frontend engineer and now im more of a full-stack engineer?
+			My friends call me <span class="rounded-lg bg-accent/30 p-1 text-quote">Adi</span> and I'm based out of <span class="rounded-lg bg-accent/30 p-1 text-quote">Bengaluru</span> (yes, I love masale dose and filter coffee). I used to be a frontend engineer and now im more of a full-stack engineer?
 		</p>
 
 		<p class="mb-2 mt-6">
@@ -23,7 +26,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				href="https://www.tensorlake.ai" 
 				target="_blank" 
 				rel="noopener noreferrer" 
-				class="text-accent">Tensorlake</a></strong> where I'm building the UI stuff. along with that, im a <strike>emergency</strike> dev according to <a class="text-[#29bc89]" href="https://x.com/_adi18_" target="_blank">@_adi18_</a> for his legalai company <span class="rounded-lg bg-[#29bc89]/30 p-1 text-quote">nyayanidhi</span>
+				class="text-accent">Tensorlake</a></strong> where I'm building the UI stuff. along with that, im a <strike>emergency</strike> dev according to <a class="text-accent" href="https://x.com/_adi18_" target="_blank">@_adi18_</a> for his legalai company <span class="rounded-lg bg-accent/30 p-1 text-quote">nyayanidhi</span>
 		</p>
 
 		<p class="mb-2 mt-6">
@@ -33,11 +36,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 	
 
-	<section aria-label="Blog post list" class="mt-10">
-		<h2 class="title">thoughts dump</h2>
-		<ul class="space-y-4 sm:space-y- mt-4">
+	<div class="space-y-10">
+	<section aria-label="Tech blog posts" class="mt-10">
+		<h2 class="title">tech</h2>
+		<ul class="space-y-4 sm:space-y-2 mt-4">
 			{
-				allPostsByDate.map((p) => (
+				techPosts.map((p) => (
 					<li class="flex flex-col gap-x-2 sm:flex-row">
 						<PostPreview post={p} />
 					</li>
@@ -45,4 +49,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 	</section>
+
+	<section aria-label="Other blog posts" class="mt-10">
+		<h2 class="title">others</h2>
+		<ul class="space-y-4 sm:space-y-2 mt-4">
+			{
+				otherPosts.map((p) => (
+					<li class="flex flex-col gap-x-2 sm:flex-row">
+						<PostPreview post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</div>
 </PageLayout>
