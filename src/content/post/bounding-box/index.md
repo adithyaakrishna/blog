@@ -7,21 +7,23 @@ coverImage:
   src: "./bb.png"
   alt: "Tensorlake Bounding Boxes"
 tags: ["tech", "ui", "react"]
-published: false
+published: true
+toc: false
 ---
 
 # Boxing the Digital Canvas: I Love PDFs
 
-In the world of document processing and visualization, PDFs remain the standard for sharing complex documents. But what if we could make them more interactive, more insightful? Today, I'll walk you through a React component I've built that adds visual annotations to both PDFs and images, highlighting different elements with color-coded bounding boxes.
+In today's era, data is THE commodity. PDFs, still the backbone of business documentation, hide valuable data in plain sight. At Tensorlake, our backend OCR services extract this gold, generating precise coordinates for every text block, table, form field and other fragment types. But raw coordinates mean nothing without visualization. So my React component for PDF viewer (we use https://github.com/anaralabs/lector for rendering our PDFs) bridged this gap of showing the boxes from JSON data coordinates onto the UI
 
 ## The Problem
 
 When working with document processing systems, we often need to visualize various elements identified by machine learning models - tables, text blocks, headers, signatures, and more. These elements need to be:
 
-1. Visually distinct based on their type
-2. Properly scaled and positioned over the original document
-3. Interactive, allowing users to click and see details
-4. Responsive to window resizing
+1. Visually distinct based on their type (different color boxes)
+2. Properly scaled and positioned over the original document (and they had to be responsive)
+3. Interactive, allowing users to hover and see details
+
+Note: The UI Design for this was done by my dear friend [@pseudonymtra](https://x.com/pseudonymtra)
 
 ## Meet the BoundingBoxRenderer
 
@@ -239,6 +241,7 @@ function DocumentViewer({ documentUrl }) {
   return (
     <div className="document-container">
       <PDFViewer url={documentUrl} />
+      // We also used a CustomLayer component exposed by the viewer library to render the boxes inside of it
       <BoundingBoxRenderer 
         type="pdf" 
         rects={rects} 
@@ -256,3 +259,5 @@ The `BoundingBoxRenderer` component demonstrates how we can enhance document vie
 Whether you're building document analysis tools, creating annotation systems, or just trying to make document viewing more insightful, the techniques shown here provide a solid foundation.
 
 Next time you look at a PDF, think about the hidden structure within it, waiting to be boxed, colored, and brought to life on your digital canvas!
+
+> Note: Thanks to [@andrewdorobantu](https://x.com/andrewdorobantu) for developing the PDF Viewer library
