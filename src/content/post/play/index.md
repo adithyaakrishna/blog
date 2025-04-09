@@ -7,7 +7,7 @@ coverImage:
   src: "./play.png"
   alt: "Play"
 tags: ["work", "joy", "play"]
-published: true
+draft: false
 ---
 
 You know that feeling when you're doing something you love and forget about time? When you're so into it that nothing else matters? That's what play feels like. And guess what? Those are the times when you do your best work.

@@ -7,7 +7,7 @@ coverImage:
   src: "./bb.png"
   alt: "Tensorlake Bounding Boxes"
 tags: ["tech", "ui", "react"]
-published: true
+draft: false
 toc: false
 ---
 
@@ -23,7 +23,7 @@ When working with document processing systems, we often need to visualize variou
 2. Properly scaled and positioned over the original document (and they had to be responsive)
 3. Interactive, allowing users to hover and see details
 
-Note: The UI Design for this was done by my dear friend [@pseudonymtra](https://x.com/pseudonymtra)
+> The UI Design for this was done by my dear friend [@pseudonymtra](https://x.com/pseudonymtra)
 
 ## Meet the BoundingBoxRenderer
 
@@ -259,4 +259,4 @@ Whether you're building document analysis tools, creating annotation systems, or
 
 Next time you look at a PDF, think about the hidden structure within it, waiting to be boxed, colored, and brought to life on your digital canvas :)
 
-> Note: Thanks to [@andrewdorobantu](https://x.com/andrewdorobantu) for developing the PDF Viewer library
+> Thanks to [@andrewdorobantu](https://x.com/andrewdorobantu) for developing the PDF Viewer library

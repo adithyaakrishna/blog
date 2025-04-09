@@ -7,7 +7,7 @@ coverImage:
   src: "./fomo.gif"
   alt: "Fear of missing out"
 tags: ["life", "thoughts", "joy"]
-published: true
+draft: false
 ---
 
 Everyone says FOMO (Fear of Missing Out) is bad for us. But what if it's actually helpful? FOMO can push us to do better things in life. It's like having someone who keeps motivating you to improve yourself, always there in your mind (even though it can make you worry sometimes).
