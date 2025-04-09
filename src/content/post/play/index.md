@@ -10,19 +10,19 @@ tags: ["work", "joy", "play"]
 published: true
 ---
 
-Have you ever experienced temporal dissociation while immersed in an activity you adore? That state of flow, where challenge converges with aptitude, often manifests as play. Paradoxically, it's during these intervals that you frequently generate your most exemplary output.
+You know that feeling when you're doing something you love and forget about time? When you're so into it that nothing else matters? That's what play feels like. And guess what? Those are the times when you do your best work.
 
-Consider the programmer coding late into the night or the artist forgetting meals while creating. To outsiders, this might look like grueling work. But to them, it's play - a joyful exploration of possibilities.
+I'm someone who loves to code and there are days I might stay up all night writing code just like many other people in tech/non-tech out there. Or an artist who's so busy drawing they skip meals. Most people would call this hard work. But these people are having fun - they're just playing and trying stuff out.
 
-This intersection of play and productivity is where magic happens. By approaching work with a playful mindset, we unlock creativity, reduce stress, and often achieve better results. But how can we cultivate this in a world that values grinding over enjoyment?
+Something cool happens when we mix play with work. When we work like we're playing, we get better ideas, worry less, and do a better job. But these days, everyone tells us to work more and more. So how do we keep having fun?
 
-The key lies in reframing our perspective. By viewing tasks as opportunities for exploration rather than burdens, we open doors to creativity and engagement. It's about asking, "How can I make this more enjoyable?"
+It's easy - just think about work in a new way. Don't see tasks as boring things you must do. See them as chances to try new things and learn. Just ask yourself: "How can I make this fun?"
 
-Perfectionism can be the enemy of play. When we're too focused on getting everything just right, we lose the freedom to experiment. Embracing imperfection, even in serious work, can lead to unexpected breakthroughs.
+Being perfect can kill the fun. If you try too hard to do everything right, you won't try new things. It's okay to make mistakes, even in serious work. Sometimes the best ideas come from messing up (this is not to be taken as a cue to mess up more xD)
 
-Identifying your personal "play zones" - activities that induce temporal oblivion - is paramount. Integrating more of these elements into your quotidian existence can exponentially enhance joy and productivity. It's about fostering an milieu where work metamorphoses into an opportunity for growth and delectation.
+Find things that make you forget about time. Do more of what's fun in your daily life. You'll be happier and get more done. Make your work a place where you can grow and have fun.
 
-Remember, what feels like play to you might look like work to others - and that's okay. The goal isn't to make every moment feel like a game, but to find engagement in what we do. By embracing a playful approach to life and work, we open ourselves to more fulfillment, creativity, and success.
+Remember, what's fun for you might look like work to someone else. That's fine! You don't need to make everything feel like a game. Just find ways to enjoy what you do. When you bring play into your work and life, you'll do better and feel better too.
 _So ask yourself_: What makes you lose track of time? How can you bring more of that playful energy into your daily life? The answers might just lead you to a more joyful and productive path.
 
 > Refs: The Perfectionist’s Guide to Losing Control by Katherine Morgan Schafler and The Power of Fun by Catherine Price
