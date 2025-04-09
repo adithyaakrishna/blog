@@ -1,8 +1,8 @@
 ---
 title: "boxing the digital canvas: i love pdfs"
 description: "how to render rectangles on a pdf using coordinates from json"
-publishDate: "03 April 2025"
-updatedDate: "03 April 2025"
+publishDate: "09 April 2025"
+updatedDate: "09 April 2025"
 coverImage:
   src: "./bb.png"
   alt: "Tensorlake Bounding Boxes"
@@ -13,7 +13,7 @@ toc: false
 
 # Boxing the Digital Canvas: I Love PDFs
 
-In today's era, data is THE commodity. PDFs, still the backbone of business documentation, hide valuable data in plain sight. At Tensorlake, our backend OCR services extract this gold, generating precise coordinates for every text block, table, form field and other fragment types. But raw coordinates mean nothing without visualization. So my React component for PDF viewer (we use https://github.com/anaralabs/lector for rendering our PDFs) bridged this gap of showing the boxes from JSON data coordinates onto the UI
+In today's era, data is THE commodity. PDFs, still the backbone of business documentation, hide valuable data in plain sight. At Tensorlake, our backend OCR services extract this gold, generating precise coordinates for every text block, table, form field or any other fragment types for that matter. But raw coordinates mean nothing without visualization. So this React component for PDF viewer (we use https://github.com/anaralabs/lector for rendering our PDFs) bridged the gap of showing the boxes from JSON data coordinates in the UI
 
 ## The Problem
 
@@ -108,7 +108,6 @@ useEffect(() => {
   // Set up listeners to recalculate on resize and image load
   calculateScale();
   window.addEventListener('resize', calculateScale);
-  // ...
 }, [props.type]);
 ```
 
@@ -205,7 +204,7 @@ export const getZIndexByType = (type: string): number => {
 };
 ```
 
-This ensures that certain element types (like section headers) always appear above others (like regular text), creating a more intuitive visual hierarchy.
+This ensures that certain element types (like section headers) always appear above others (like regular text), creating a more user-friendly visual hierarchy
 
 ## The Final Touch: Hover Effects
 
@@ -215,11 +214,11 @@ What makes our component truly interactive is the hover effect. When a user hove
 3. A label showing the element type pops up
 4. The z-index temporarily increases to bring it to the front
 
-All of this creates a responsive, intuitive interface for exploring document structure.
+All of this creates a responsive interface for exploring the document structure
 
 ## Putting It All Together
 
-To use this component in your application, you would typically:
+To use this component in your app, you would typically:
 
 1. Parse your document to identify elements and their bounding boxes
 2. Convert those into the `HighlightRectData` format
@@ -256,8 +255,8 @@ function DocumentViewer({ documentUrl }) {
 
 The `BoundingBoxRenderer` component demonstrates how we can enhance document viewing experiences by adding interactive visual layers on top of PDFs and images. By handling the complexities of positioning, scaling, and styling, it allows developers to focus on the document content rather than rendering details.
 
-Whether you're building document analysis tools, creating annotation systems, or just trying to make document viewing more insightful, the techniques shown here provide a solid foundation.
+Whether you're building document analysis tools, creating annotation systems, or just tryna make document viewing more insightful, the techniques shown here provide a good head-start.
 
-Next time you look at a PDF, think about the hidden structure within it, waiting to be boxed, colored, and brought to life on your digital canvas!
+Next time you look at a PDF, think about the hidden structure within it, waiting to be boxed, colored, and brought to life on your digital canvas :)
 
 > Note: Thanks to [@andrewdorobantu](https://x.com/andrewdorobantu) for developing the PDF Viewer library
