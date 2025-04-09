@@ -1,8 +1,8 @@
 ---
 title: "boxing the digital canvas: i love pdfs"
 description: "how to render rectangles on a pdf using coordinates from json"
-publishDate: "09 April 2025"
-updatedDate: "09 April 2025"
+publishDate: "10 April 2025"
+updatedDate: "10 April 2025"
 coverImage:
   src: "./bb.png"
   alt: "Tensorlake Bounding Boxes"
