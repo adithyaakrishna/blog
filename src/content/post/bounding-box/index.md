@@ -1,8 +1,8 @@
 ---
 title: "boxing the digital canvas: i love pdfs"
 description: "how to render rectangles on a pdf using coordinates from json"
-publishDate: "10 April 2025"
-updatedDate: "10 April 2025"
+publishDate: "12 April 2025"
+updatedDate: "12 April 2025"
 coverImage:
   src: "./bb.png"
   alt: "Tensorlake Bounding Boxes"
@@ -13,7 +13,7 @@ toc: false
 
 # Boxing the Digital Canvas: I Love PDFs
 
-In today's era, data is THE commodity. PDFs, still the backbone of business documentation, hide valuable data in plain sight. At Tensorlake, our backend OCR services extract this gold, generating precise coordinates for every text block, table, form field or any other fragment types for that matter. But raw coordinates mean nothing without visualization. So this React component for PDF viewer (we use https://github.com/anaralabs/lector for rendering our PDFs) bridged the gap of showing the boxes from JSON data coordinates in the UI
+In today's era, data is THE commodity. PDFs, still the backbone of business documentation, hide valuable data in plain sight. At Tensorlake, our backend OCR services extract data, generating precise coordinates for every text block, table, form field or any other fragment types for that matter. But raw coordinates mean nothing without visualization. So I built this React component for PDF viewer (we use https://github.com/anaralabs/lector for rendering our PDFs) that bridged the gap of showing the boxes from JSON data coordinates and the UI
 
 ## The Problem
 
@@ -39,40 +39,38 @@ interface BoundingBoxRendererProps {
 }
 
 export function BoundingBoxRenderer(props: BoundingBoxRendererProps): ReactElement {
-  export function BoundingBoxRenderer(props: BoundingBoxRendererProps): ReactElement {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState({ x: 1, y: 1 });
-  const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [scale, setScale] = useState({ x: 1, y: 1 });
+    const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
 
-  // Image-specific scaling effect
-  useEffect(() => {
-    if (props.type !== 'image') return;
-    
-    // Logic to calculate scaling factors between natural image dimensions and displayed dimensions
-  }, [props.type]);
+    // Image-specific scaling effect
+    useEffect(() => {
+      if (props.type !== 'image') return;
+      
+      // Logic to calculate scaling factors between natural image dimensions and displayed dimensions
+    }, [props.type]);
 
-  // Main rendering effect
-  useEffect(() => {
+    // Main rendering effect
+    useEffect(() => {
+      if (props.type === 'image') {
+        // Render bounding boxes for images
+      } else {
+        // Render bounding boxes for PDFs
+      }
+
+      // Cleanup function
+      return () => {
+        // Remove containers when component unmounts
+      };
+    }, [props.rects, props.type, scale, imageSize, props.onFragmentClick]);
+
+    // Conditional rendering based on type
     if (props.type === 'image') {
-      // Render bounding boxes for images
-    } else {
-      // Render bounding boxes for PDFs
+      return <div ref={containerRef} className="absolute inset-0 pointer-events-none" />;
     }
 
-    // Cleanup function
-    return () => {
-      // Remove containers when component unmounts
-    };
-  }, [props.rects, props.type, scale, imageSize, props.onFragmentClick]);
-
-  // Conditional rendering based on type
-  if (props.type === 'image') {
-    return <div ref={containerRef} className="absolute inset-0 pointer-events-none" />;
+    return <div className="hidden" />;
   }
-
-  return <div className="hidden" />;
-}
-}
 ```
 
 The component takes three key props:
@@ -253,10 +251,10 @@ function DocumentViewer({ documentUrl }) {
 
 ## Conclusion
 
-The `BoundingBoxRenderer` component demonstrates how we can enhance document viewing experiences by adding interactive visual layers on top of PDFs and images. By handling the complexities of positioning, scaling, and styling, it allows developers to focus on the document content rather than rendering details.
+The `BoundingBoxRenderer` component demonstrates how you can enhance document viewing experiences by adding interactive visual layers on top of PDFs and images. By handling the complexities of positioning, scaling, and styling, it allows developers to focus on the document content rather than rendering details.
 
-Whether you're building document analysis tools, creating annotation systems, or just tryna make document viewing more insightful, the techniques shown here provide a good head-start.
+Whether you're building document analysis tools, creating annotation systems, or just trying to make document viewing more insightful, the techniques shown here provide a good head-start.
 
-Next time you look at a PDF, think about the hidden structure within it, waiting to be boxed, colored, and brought to life on your digital canvas :)
+Next time you look at a PDF, think about the hidden structure within it, waiting to be boxed, colored, and brought to life on your screen :)
 
-> Thanks to [@andrewdorobantu](https://x.com/andrewdorobantu) for developing the PDF Viewer library
+> Huge shoutout to [@andrewdorobantu](https://x.com/andrewdorobantu) for developing the PDF Viewer library
